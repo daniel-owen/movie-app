@@ -1,0 +1,45 @@
+@import 'configs/variables';
+@import 'components/misc';
+@import 'layout/header';
+@import 'layout/footer';
+
+body{
+	width: 100%;
+	margin: 0px;
+	background-color: $mainBgColor;
+}
+
+#body{
+	.container{
+		width: $width;
+		margin: auto;
+		overflow: hidden;
+		&.after-header{
+			padding-top: 40px;
+		}
+		.col{
+			width: getColumnWidth($width, $numColumns, $margin);
+			margin: auto $margin;
+			float: left;
+			padding-top: 20px;
+			@extend .base-font;
+			img{
+				height: 430px;
+				max-width: 100%;
+				margin: 10px;
+			}
+		}
+	}
+}
+
+.search-form{
+	text-align: center;
+	padding: 20px;
+}
+
+.title{
+	@extend .base-font;
+	font-size: 35px;
+	color: #48AD01;
+	padding: 15px 0px 20px;
+}
